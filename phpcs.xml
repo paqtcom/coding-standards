@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Paqt.com phpcs configuration">
+    <description>Paqt ruleset for PHP projects.</description>
+
+    <arg name="report-width" value="80"/>
+    <arg name="report" value="full"/>
+    <arg name="extensions" value="php"/>
+    <arg name="encoding" value="utf-8"/>
+    <arg name="parallel" value="8"/>
+
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>test/*</exclude-pattern>
+        <exclude-pattern>tests/*</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR2" />
+
+    <file>src</file>
+</ruleset>
