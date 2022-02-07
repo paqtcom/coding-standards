@@ -12,6 +12,7 @@
             "PaqtCom\\CodingStandards\\Tests\\": "tests/"
         }
     },
+    "bin": ["bin/update-phpcs", "bin/update-php-cs-fixer", "bin/update-phpmd", "bin/update-phpstan"],
     "require": {
         "php": "7.*|8.*",
         "ext-dom": "*"

@@ -8,9 +8,14 @@ class CodingStandardGenerator
 {
     public static function renderAll(string $rootFolder, array $paths): void
     {
-        self::renderFile($rootFolder . '/.php-cs-fixer.php', self::renderPhpCsFixerConfig());
-        self::renderFile($rootFolder . '/phpmd.xml', self::renderPhpmdConfig());
-        self::renderFile($rootFolder . '/phpcs.xml', self::renderPhpcsXml($paths));
+        self::updatePhpCsFixerConfig($rootFolder);
+        self::updatePhpmdConfig($rootFolder);
+        self::updatePhpcsConfig($rootFolder, $paths);
+        self::updatePhpstanConfig($rootFolder, $paths);
+    }
+
+    public static function updatePhpstanConfig(string $rootFolder, array $paths)
+    {
         if (file_exists($rootFolder . '/phpstan.neon')) {
             $contents = file_get_contents($rootFolder . '/phpstan.neon');
             if ($contents === false) {
@@ -20,6 +25,27 @@ class CodingStandardGenerator
         } else {
             self::renderFile($rootFolder . '/phpstan.neon', self::renderPhpstanConfig($paths));
         }
+    }
+
+    public static function updatePhpCsFixerConfig(string $rootFolder): void
+    {
+        if (file_exists($rootFolder . '/.php_cs')) {
+            unlink($rootFolder . '/.php_cs');
+        }
+        if (file_exists($rootFolder . '/.php_cs.cache')) {
+            unlink($rootFolder . '/.php_cs.cache');
+        }
+        self::renderFile($rootFolder . '/.php-cs-fixer.php', self::renderPhpCsFixerConfig());
+    }
+
+    public static function updatePhpmdConfig(string $rootFolder): void
+    {
+        self::renderFile($rootFolder . '/phpmd.xml', self::renderPhpmdConfig());
+    }
+
+    public static function updatePhpcsConfig(string $rootFolder, array $paths): void
+    {
+        self::renderFile($rootFolder . '/phpcs.xml', self::renderPhpcsXml($paths));
     }
 
     public static function renderPhpCsFixerConfig(): string
