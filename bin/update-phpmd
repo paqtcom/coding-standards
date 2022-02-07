@@ -4,5 +4,5 @@ include_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
 use PaqtCom\CodingStandards\CodingStandardGenerator;
 
-$rootPath = dirname(\Composer\Factory::getComposerFile());
+$rootPath = dirname(__DIR__);
 CodingStandardGenerator::updatePhpmdConfig($rootPath);

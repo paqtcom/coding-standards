@@ -8,5 +8,5 @@ if ($argc < 2) {
     echo "Usage: " . $argv[0] . " folder1,folder2" . PHP_EOL;
     exit(1);
 }
-$rootPath = dirname(\Composer\Factory::getComposerFile());
+$rootPath = dirname(__DIR__);
 CodingStandardGenerator::updatePhpstanConfig($rootPath, explode(',', $argv[1]));
