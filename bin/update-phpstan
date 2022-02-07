@@ -8,5 +8,17 @@ if ($argc < 2) {
     echo "Usage: " . $argv[0] . " folder1,folder2" . PHP_EOL;
     exit(1);
 }
-$rootPath = dirname(__DIR__);
+
+function determineRootPath() {
+    if (class_exists(\Composer\Factory::class)) {
+        return dirname(\Composer\Factory::getComposerFile());
+    }
+    $path = ($_composer_autoload_path ?? __DIR__) . '/..';
+    while (strlen($path) > 2 && !file_exists($path . '/composer.json')) {
+        $path = dirname($path);
+    }
+    return $path;
+}
+
+$rootPath = determineRootPath();
 CodingStandardGenerator::updatePhpstanConfig($rootPath, explode(',', $argv[1]));

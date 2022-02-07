@@ -4,5 +4,16 @@ include_once $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
 use PaqtCom\CodingStandards\CodingStandardGenerator;
 
-$rootPath = dirname(__DIR__);
+function determineRootPath() {
+    if (class_exists(\Composer\Factory::class)) {
+        return dirname(\Composer\Factory::getComposerFile());
+    }
+    $path = ($_composer_autoload_path ?? __DIR__) . '/..';
+    while (strlen($path) > 2 && !file_exists($path . '/composer.json')) {
+        $path = dirname($path);
+    }
+    return $path;
+}
+
+$rootPath = determineRootPath();
 CodingStandardGenerator::updatePhpmdConfig($rootPath);
