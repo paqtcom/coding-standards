@@ -14,7 +14,7 @@ class CodingStandardGenerator
         self::updatePhpstanConfig($rootFolder, $paths);
     }
 
-    public static function updatePhpstanConfig(string $rootFolder, array $paths)
+    public static function updatePhpstanConfig(string $rootFolder, array $paths): void
     {
         if (file_exists($rootFolder . '/phpstan.neon')) {
             $contents = file_get_contents($rootFolder . '/phpstan.neon');
