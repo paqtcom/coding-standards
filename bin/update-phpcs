@@ -8,11 +8,26 @@ if ($argc < 2) {
     echo "Usage: " . $argv[0] . " folder1,folder2" . PHP_EOL;
     exit(1);
 }
+function getEnvironment($name) {
+    if (array_key_exists($name, $_SERVER)) {
+        return (string) $_SERVER[$name];
+    }
+    if (array_key_exists($name, $_ENV)) {
+        return (string) $_ENV[$name];
+    }
+    return getenv($name);
+}
 function determineRootPath() {
     if (class_exists(\Composer\Factory::class)) {
         return dirname(\Composer\Factory::getComposerFile());
     }
-    $path = ($_composer_autoload_path ?? __DIR__) . '/..';
+    if ($path = getEnvironment('COMPOSER')) {
+        return $path;
+    }
+    $path = dirname(dirname(__DIR__));
+    if ($_composer_autoload_path ?? null) {
+        $path = dirname($_composer_autoload_path);
+    }
     while (strlen($path) > 2 && !file_exists($path . '/composer.json')) {
         $path = dirname($path);
     }

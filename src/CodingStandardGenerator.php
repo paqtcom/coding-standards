@@ -2,7 +2,9 @@
 
 namespace PaqtCom\CodingStandards;
 
+use LogicException;
 use RuntimeException;
+use Symfony\Component\Yaml\Yaml;
 
 class CodingStandardGenerator
 {
@@ -16,6 +18,9 @@ class CodingStandardGenerator
 
     public static function updatePhpstanConfig(string $rootFolder, array $paths): void
     {
+        if (!class_exists(Yaml::class)) {
+            throw new LogicException('You require symfony/yaml to update the phpstan config automatically');
+        }
         if (file_exists($rootFolder . '/phpstan.neon')) {
             $contents = file_get_contents($rootFolder . '/phpstan.neon');
             if ($contents === false) {
