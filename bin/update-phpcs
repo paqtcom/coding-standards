@@ -1,21 +1,13 @@
 #!/usr/bin/env php
 <?php
-$possibleFiles = [__DIR__.'/../../autoload.php', __DIR__.'/../autoload.php', __DIR__.'/vendor/autoload.php'];
-$file = null;
-foreach ($possibleFiles as $possibleFile) {
-    if (file_exists($possibleFile)) {
-        $file = $possibleFile;
-
-        break;
-    }
-}
-
-if (null === $file) {
-    throw new RuntimeException('Unable to locate autoload.php file.');
-}
-
-require_once $file;
 use PaqtCom\CodingStandards\CodingStandardGenerator;
+
+$path = __DIR__;
+while (strlen($path) > 2 && !file_exists($path . '/autoload.php')) {
+        $path = dirname($path);
+}
+
+require_once $path . '/autoload.php';
 
 if ($argc < 2) {
     echo "Usage: " . $argv[0] . " folder1,folder2" . PHP_EOL;
