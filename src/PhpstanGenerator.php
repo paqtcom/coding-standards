@@ -11,6 +11,6 @@ class PhpstanGenerator
         $array = Yaml::parse($phpstanContents);
         $array['parameters']['paths'] = $paths;
 
-        return Yaml::dump($array);
+        return Yaml::dump($array, 12);
     }
 }
