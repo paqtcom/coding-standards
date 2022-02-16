@@ -8,6 +8,10 @@
     <arg name="encoding" value="utf-8"/>
     <arg name="parallel" value="8"/>
 
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>config/*</exclude-pattern>
+    </rule>
+
     <rule ref="Internal.NoCodeFound">
         <exclude-pattern>modules/**.blade.php</exclude-pattern>
     </rule>
