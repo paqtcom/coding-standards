@@ -1,9 +1,0 @@
-parameters:
-    level: max
-
-    paths:
-        - app
-        - config
-
-    checkMissingIterableValueType: false
-    checkUnionTypes: true

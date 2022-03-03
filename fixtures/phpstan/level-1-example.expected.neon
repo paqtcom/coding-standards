@@ -1,9 +1,0 @@
-parameters:
-    level: 1
-
-    paths:
-        - src
-        - tests
-
-    checkMissingIterableValueType: false
-    checkUnionTypes: true
