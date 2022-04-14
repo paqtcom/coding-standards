@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<ruleset xmlns="http://pmd.sf.net/ruleset/1.0.0"
+<ruleset name="Paqt.com phpmd configuration"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
          xsi:noNamespaceSchemaLocation=" http://pmd.sf.net/ruleset_xml_schema.xsd">
@@ -44,7 +45,7 @@
     </rule>
     <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
-            <property name="exceptions" value="id" />
+            <property name="exceptions" value="id,io" />
         </properties>
     </rule>
     <rule ref="rulesets/naming.xml/LongVariable">
@@ -59,7 +60,5 @@
         <exclude name="CouplingBetweenObjects" />
         <exclude name="NumberOfChildren" />
     </rule>
-    <rule ref="rulesets/unusedcode.xml">
-        <exclude name="UnusedFormalParameter" />
-    </rule>
+    <rule ref="rulesets/unusedcode.xml" />
 </ruleset>
