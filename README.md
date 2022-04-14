@@ -1,8 +1,6 @@
 # PAQT Coding Standards
 Bevat files voor de coding standaarden die gehanteerd worden binnen Paqt. Het bevat coding standaarden voor [phpstan](https://github.com/phpstan/phpstan), [phpmd](https://github.com/phpmd/phpmd), [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) en [php cs fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
-> Instructies om te migreren naar de PAQT coding standards [zijn hier te vinden](docs/migration.md).
-
 ## Installeren
 Voeg de dependency toe als een (dev) dependency via Composer.
 ```bash
