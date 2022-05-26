@@ -1,0 +1,9 @@
+includes:
+    - %rootDir%/../../nunomaduro/larastan/extension.neon
+    - phpstan.neon
+
+parameters:
+    universalObjectCratesClasses:
+        - Illuminate\Database\Eloquent\Model
+        - Laravel\Nova\Fields\ActionFields
+        - Laravel\Nova\Resource

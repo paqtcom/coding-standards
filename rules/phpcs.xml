@@ -26,6 +26,4 @@
     </rule>
 
     <rule ref="PSR2" />
-
-    <file>src</file>
 </ruleset>
