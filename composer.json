@@ -1,10 +1,17 @@
 {
     "name": "paqtcom/coding-standards",
-    "description": "Paqt coding standards",
+    "description": "PAQT.com Coding Standards",
     "type": "library",
     "license": "GPL-3.0",
-    "require": {
+    "suggest": {
+        "nunomaduro/larastan": "Provides phpstan extension specifically aimed towards Laravel"
     },
-    "require-dev": {
+    "conflict": {
+        "php": "<7.4",
+        "friendsofphp/php-cs-fixer": "<3.0",
+        "nunomaduro/larastan": "<0.6",
+        "squizlabs/php_codesniffer": "<3.0",
+        "phpmd/phpmd": "<2.0",
+        "phpstan/phpstan": "<0.12.50"
     }
 }
