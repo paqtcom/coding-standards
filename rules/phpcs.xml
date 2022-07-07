@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Paqt.com phpcs configuration">
-    <description>Paqt ruleset for PHP projects.</description>
+<ruleset name="PAQT.com phpcs configuration">
+    <description>PAQT.com ruleset for PHP projects.</description>
 
     <arg name="report-width" value="80"/>
     <arg name="report" value="full"/>

@@ -1,6 +1,6 @@
 {
     "name": "paqtcom/coding-standards",
-    "description": "Paqt coding standards",
+    "description": "PAQT.com Coding Standards",
     "type": "library",
     "license": "GPL-3.0",
     "suggest": {

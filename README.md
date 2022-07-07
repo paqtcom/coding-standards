@@ -1,5 +1,5 @@
-# PAQT Coding Standards
-Bevat files voor de coding standaarden die gehanteerd worden binnen Paqt. Het bevat coding standaarden voor [phpstan](https://github.com/phpstan/phpstan), [phpmd](https://github.com/phpmd/phpmd), [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) en [php cs fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
+# PAQT.com Coding Standards
+Bevat files voor de coding standaarden die gehanteerd worden binnen PAQT. Het bevat coding standaarden voor [phpstan](https://github.com/phpstan/phpstan), [phpmd](https://github.com/phpmd/phpmd), [phpcs](https://github.com/squizlabs/PHP_CodeSniffer) en [php cs fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
 ## Installeren
 Voeg de dependency toe als een (dev) dependency via Composer.
@@ -32,8 +32,8 @@ op de werking of configuratie van de `paqtcom/coding-standards` package.
 Voeg een `phpcs.xml` bestand toe aan je project met de volgende minimale configuratie:
 ```xml
 <?xml version="1.0"?>
-<ruleset name="Paqt.com phpcs configuration">
-    <description>Paqt ruleset for PHP projects.</description>
+<ruleset name="PAQT.com phpcs configuration">
+    <description>PAQT.com ruleset for PHP projects.</description>
 
     <file>app</file>
     <file>src</file>
@@ -102,7 +102,7 @@ return $config->setFinder($finder)
 Voeg een `phpmd.xml` bestand toe aan je project met de volgende minimale configuratie:
 ```xml
 <?xml version="1.0"?>
-<ruleset name="Paqt.com phpmd configuration"
+<ruleset name="PAQT.com phpmd configuration"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
