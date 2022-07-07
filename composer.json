@@ -7,7 +7,7 @@
         "nunomaduro/larastan": "Provides phpstan extension specifically aimed towards Laravel"
     },
     "conflict": {
-        "php": "<7.3",
+        "php": "<7.4",
         "friendsofphp/php-cs-fixer": "<3.0",
         "nunomaduro/larastan": "<0.6",
         "squizlabs/php_codesniffer": "<3.0",
