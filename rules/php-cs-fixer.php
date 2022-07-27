@@ -3,7 +3,7 @@
 return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setRules([
-        '@PSR2'                                  => true,
+        '@PSR12'                                 => true,
         'array_syntax'                           => ['syntax' => 'short'],
         'class_attributes_separation'            => ['elements' => ['method' => 'one']],
         'multiline_whitespace_before_semicolons' => true,
