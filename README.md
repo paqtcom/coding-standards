@@ -7,23 +7,7 @@ Voeg de dependency toe als een (dev) dependency via Composer.
 composer require paqtcom/coding-standards --dev
 ```
 
-Alle benodigde dependencies worden daarmee geïnstalleerd en hoeven niet apart worden toegevoegd als dependencies
-van je project.
-
-Alle dependencies zijn compatible met PHP-versies `7.3` t/m `8.1` waarbij Composer de meest geschikte specifieke versie
-van een dependency installeert op basis van de gebruikte PHP-versie en compatibiliteit met andere dependencies van je project.
-Composer zal in alle gevallen kiezen voor de hoogst mogelijke geschikte versie van een dependency. 
-
-### Specifieke versie vastzetten
-Wanneer er een conflict of incompatibiliteit ontstaat, is het mogelijk om handmatig een specifieke versie van
-een dependency te installeren:
-
-```shell
-composer require nunomaduro/larastan "^0.7" --update-with-dependencies --dev
-```
-
-De betreffende dependency zal dan lokaal voor je project gedowngrade worden en zal verder geen effect hebben
-op de werking of configuratie van de `paqtcom/coding-standards` package.
+*Let op!* Hiermee zijn nog niet alle benodigde tools geïnstalleerd. Deze package bevat enkel configuratie bestanden.
 
 ## Configuratie
 
