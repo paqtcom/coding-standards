@@ -42,7 +42,7 @@ return (new PhpCsFixer\Config())
         'no_short_bool_cast'                          => true,
         'no_singleline_whitespace_before_semicolons'  => true,
         'no_spaces_around_offset'                     => true,
-        'no_trailing_comma_in_list_call'              => true,
+        'no_trailing_comma_in_singleline'             => true,
         'no_unneeded_control_parentheses'             => true,
         'no_unused_imports'                           => true,
         'no_useless_else'                             => true,
