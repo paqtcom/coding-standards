@@ -61,7 +61,45 @@ return (new PhpCsFixer\Config())
         'phpdoc_no_useless_inheritdoc'                => true,
         'phpdoc_return_self_reference'                => true,
         'phpdoc_scalar'                               => true,
-        'phpdoc_separation'                           => true,
+        'phpdoc_separation' => [
+            'groups' => [
+                // general
+                [
+                    'deprecated',
+                    'internal',
+                    'todo',
+                ],
+                // doc blocks, phpstan types
+                [
+                    'template',
+                    'extends',
+                    'mixin',
+                    'phpstan-template',
+                    'phpstan-extends',
+                    'phpstan-param',
+                    'param',
+                    'param-out',
+                    'phpstan-var',
+                    'var',
+                    'return',
+                    'phpstan-return',
+                    'property',
+                    'property-read',
+                    'property-write',
+                    'method'
+                ],
+                // phpunit specific
+                [
+                    'test',
+                    'dataProvider',
+                    'covers',
+                    'coversDefaultClass',
+                    'coversNothing',
+                    'depends',
+                    'requires'
+                ],
+            ],
+        ],
         'phpdoc_single_line_var_spacing'              => true,
         'phpdoc_summary'                              => true,
         'phpdoc_to_comment'                           => false,
