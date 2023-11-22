@@ -108,7 +108,6 @@ return (new PhpCsFixer\Config())
         'phpdoc_var_without_name'                     => false,
         'self_accessor'                               => true,
         'short_scalar_cast'                           => true,
-        'single_blank_line_before_namespace'          => true,
         'single_class_element_per_statement'          => true,
         'space_after_semicolon'                       => true,
         'standardize_not_equals'                      => true,
