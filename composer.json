@@ -4,12 +4,13 @@
     "type": "library",
     "license": "GPL-3.0",
     "suggest": {
-        "nunomaduro/larastan": "Provides phpstan extension specifically aimed towards Laravel"
+        "larastan/larastan": "Provides phpstan extension specifically aimed towards Laravel"
     },
     "conflict": {
-        "php": "<7.4",
+        "php": "<8.0",
         "friendsofphp/php-cs-fixer": "<3.11",
-        "nunomaduro/larastan": "<0.6",
+        "larastan/larastan": "<2.7.0",
+        "nunomaduro/larastan": "*",
         "squizlabs/php_codesniffer": "<3.0",
         "phpmd/phpmd": "<2.0",
         "phpstan/phpstan": "<0.12.50"
