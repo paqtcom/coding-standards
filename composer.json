@@ -13,6 +13,6 @@
         "nunomaduro/larastan": "*",
         "squizlabs/php_codesniffer": "<3.0",
         "phpmd/phpmd": "<2.0",
-        "phpstan/phpstan": "<0.12.50"
+        "phpstan/phpstan": "<1.11.0"
     }
 }
