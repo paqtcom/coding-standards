@@ -1,5 +1,8 @@
 parameters:
     level: max
 
-    checkMissingIterableValueType: false
     checkUnionTypes: true
+
+    ignoreErrors:
+           -
+               identifier: missingType.iterableValue
