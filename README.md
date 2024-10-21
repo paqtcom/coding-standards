@@ -158,11 +158,3 @@ parameters:
 
     checkUnionTypes: false
 ```
-
-### phpcpd
-
-```shell
-vendor/bin/phpcpd app src ...
-```
-
-> Voor het gebruik van `phpcpd` is geen configuratie nodig.
