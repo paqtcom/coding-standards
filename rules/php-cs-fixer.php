@@ -114,5 +114,6 @@ return (new PhpCsFixer\Config())
         'trailing_comma_in_multiline'                 => ['elements' => ['arrays']],
         'trim_array_spaces'                           => true,
         'whitespace_after_comma_in_array'             => true,
+        'declare_strict_types'                        => true,
     ])
     ->setLineEnding("\n");
