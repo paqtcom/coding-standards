@@ -111,7 +111,15 @@ return (new PhpCsFixer\Config())
         'single_class_element_per_statement'          => true,
         'space_after_semicolon'                       => true,
         'standardize_not_equals'                      => true,
-        'trailing_comma_in_multiline'                 => ['elements' => ['arrays']],
+        'trailing_comma_in_multiline'                 => [
+            'elements' => [
+                'arguments',
+                'array_destructuring',
+                'arrays',
+                'match',
+                'parameters',
+            ],
+        ],
         'trim_array_spaces'                           => true,
         'whitespace_after_comma_in_array'             => true,
         'declare_strict_types'                        => true,
